@@ -1,0 +1,18 @@
+@import 'tailwindcss';
+
+@theme {
+  --default-font-family: "Poppins", san-serif;
+  --font-pacifico: "Pacifico", cursive;
+}
+
+input:focus,
+textarea:focus{
+  outline: none;
+}
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hidden {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
