@@ -4,7 +4,7 @@ import { Navigate } from "react-router-dom";
 
 
 const baseQuery = fetchBaseQuery({
-    baseUrl: "http://localhost:5000",
+    baseUrl: "https://routinenodeserver.onrender.com",
     credentials: "include",
     prepareHeaders: (headers, {getState}) => {
         const token = getState().authSlice.token;

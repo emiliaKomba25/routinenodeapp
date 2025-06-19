@@ -19,7 +19,7 @@ function App() {
 
   useEffect(() => {
     const rawBaseQuery = fetchBaseQuery({
-      baseUrl: "http://localhost:5000",
+      baseUrl: "https://routinenodeserver.onrender.com",
       credentials: "include"
     })
     const refreshApp = async () => {
