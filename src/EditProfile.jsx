@@ -79,7 +79,7 @@ const EditProfile = () => {
   return (
     <>
         <Header />
-        <main className='flex flex-col items-center justify-center gap-2 h-screen px-5 bg-linear-90 from-indigo-600 to-pink-600'>
+        <main className='flex flex-col items-center justify-center gap-2 pt-16 pb-4 min-h-screen px-5 bg-linear-90 from-indigo-600 to-pink-600'>
             <form onSubmit={(e) => handleSubmit(e)} className='bg-[#F3F0E8] p-4 flex flex-col items-center gap-2 w-full max-w-sm rounded-md'>
                 <h2 className='font-pacifico font-medium text-indigo-600 mb-2'>Be apart of Routine Node</h2>
                 {errMsg && <p className='text-[0.8rem] text-red-600 bg-red-100 border-2 border-red-600 w-full text-center px-3 py-2 rounded-md'>{errMsg}</p>}
