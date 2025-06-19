@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Link, useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import Header from './components/Header'
 import { Circle, CircleCheck, LoaderCircle } from 'lucide-react'
 import { useGetSingleTaskQuery, useUpdateTaskMutation } from './api/tasks/taskApi'

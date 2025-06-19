@@ -30,15 +30,15 @@ const Header = () => {
         }
     }
     return (
-        <header className='flex justify-center items-center fixed w-full px-4 h-14 shadow-sm bg-[#F3F0E8]'>
+        <header className='flex justify-center items-center fixed w-full px-4 h-14 shadow-sm bg-[#F3F0E8] border-b-1 border-[#ccc]'>
             <div className="w-full max-w-7xl flex justify-between items-center">
                 <Link to="/dashboard">
                 <h1 className='font-pacifico text-indigo-600'>Routine Node</h1>
             </Link>
-            {(location.pathname !== '/login' && location.pathname !== '/dashboard' && location.pathname !== '/profile' && location.pathname !== '/edit-profile') && <Link to="/login" className='bg-pink-600 text-[#F3F0E8] text-[0.9rem] px-2 py-1 rounded-sm cursor-pointer'>
+            {(location.pathname !== '/login' && location.pathname !== '/dashboard' && location.pathname !== '/profile' && location.pathname !== '/edit-profile' && !location.pathname.includes('/edit-task')) && <Link to="/login" className='bg-pink-600 text-[#F3F0E8] text-[0.9rem] px-2 py-1 rounded-sm cursor-pointer'>
                 Login
             </Link>}
-            {(location.pathname === '/dashboard' || location.pathname === '/profile' || location.pathname === '/edit-profile') && <div className="flex gap-2">
+            {(location.pathname === '/dashboard' || location.pathname === '/profile' || location.pathname === '/edit-profile' || location.pathname.includes('/edit-task')) && <div className="flex gap-2">
                 <Link to="/profile">
                     <img src={userData?.data?.imageUrl ?? "/profile.jpg"} width="40px" height="40px" className="rounded-full object-cover object-top"/>
                 </Link>

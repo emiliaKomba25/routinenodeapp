@@ -130,7 +130,7 @@ const Dashboard = () => {
                             {task.taskname}
                         </div>
                         <p className='mb-1'>{task.note}</p>
-                        <div className='flex justify-between text-[0.7rem]'>
+                        <div className='flex justify-between text-[0.6rem]'>
                             <p className='text-[#999] mb-1'>{format(new Date(task.createdAt), "hh:mm aaa - do MMM, yyy")}</p>
                             <p className='text-[#999] mb-1'>{task.createdAt !== task.updatedAt && `Updated: ${format(new Date(task.updatedAt), "hh:mm aaa - do MMM, yyy")}`}</p>
                         </div>
