@@ -34,7 +34,7 @@ const Profile = () => {
         <>
             <Header />
             <main className='w-full h-screen flex justify-center items-center bg-linear-90 from-indigo-600 p-5 to-pink-600'>
-                {isLoading && !tasks ? <LoaderCircle className='text-[#F3F0E8] animate-spin' /> : tasks && <div className='w-full max-w-sm p-10 rounded-lg flex flex-col items-center gap-2 text-[0.9rem] bg-[#F3F0E8]'>
+                {(isLoading || !tasks || !userData) ? <LoaderCircle className='text-[#F3F0E8] animate-spin' /> : tasks && <div className='w-full max-w-sm p-10 rounded-lg flex flex-col items-center gap-2 text-[0.9rem] bg-[#F3F0E8]'>
                     <img src={userData.imageUrl || "/profile.jpg"} alt="" width="100px" height="100px" className='object-cover object-top w-25 h-25 rounded-full'/>
                     <div className='flex flex-col justify-center items-center gap-1 text-[0.9rem]'>
                         <p className='font-bold'>{userData.firstname} {userData.lastname}</p>
