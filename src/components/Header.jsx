@@ -40,7 +40,7 @@ const Header = () => {
             </Link>}
             {(location.pathname === '/dashboard' || location.pathname === '/profile' || location.pathname === '/edit-profile' || location.pathname.includes('/edit-task')) && <div className="flex gap-2">
                 <Link to="/profile">
-                    <img src={userData?.data?.imageUrl !== "" ? userData.data.imageUrl : "/profile.jpg"} width="40px" height="40px" className="rounded-full w-10 h-10 object-cover object-top"/>
+                    <img src={userData?.data ? userData.data.imageUrl : "/profile.jpg"} width="40px" height="40px" className="rounded-full w-10 h-10 object-cover object-top"/>
                 </Link>
                 <button onClick={handleLogout} className='bg-pink-600 text-[#F3F0E8] text-[0.9rem] px-2 py-1 rounded-sm flex justify-center items-center cursor-pointer w-17'>
                     {isLoggingout ? <LoaderCircle className="animate-spin" size={18} /> : "Logout"}
